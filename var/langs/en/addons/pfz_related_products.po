@@ -1,0 +1,25 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::pfz_related_products"
+msgid "Related products"
+msgstr "Related products"
+
+msgctxt "Addons::description::pfz_related_products"
+msgid "Makes it possible to manually specify products as related"
+msgstr "Makes it possible to manually specify products as related"
+
+msgctxt "Languages::pfz_related_products"
+msgid "Related products"
+msgstr "Related products"
+
+msgctxt "Languages::pfz_related_products_added"
+msgid "The following product(s) were added to your cart"
+msgstr "The following product(s) were added to your cart"
+
+msgctxt "Languages::pfz_related_products_out_of_stock"
+msgid "This product cannot be added to your cart, because following product(s) are out of stock:"
+msgstr "This product cannot be added to your cart, because following product(s) are out of stock:"
