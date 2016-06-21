@@ -19,8 +19,8 @@ if (!defined('BOOTSTRAP')) { die('Access denied'); }
 function fn_pfz_related_products_get_products(&$params, &$fields, &$sortings, &$condition, &$join, &$sorting, &$group_by)
 {
     if (!empty($params['for_pfz_related_product'])) {
-        $join .= " LEFT JOIN ?:product_pfz_related_products ON products.product_id = ?:product_bundle_products.bundle_id";
-        $condition .= db_quote(" AND ?:product_pfz_related_products.product_id = ?i", $params['for_bundle_product']);
+        $join .= " LEFT JOIN ?:product_pfz_related_products ON products.product_id = ?:product_pfz_related_products.pfz_related_id";
+        $condition .= db_quote(" AND ?:product_pfz_related_products.product_id = ?i", $params['for_pfz_related_product']);
     }
 
 }
@@ -32,7 +32,7 @@ function fn_pfz_related_products_get_product_data_post(&$product, &$auth)
 	
     if (!empty($product['product_id'])) {
 		
-		list($pfz_related) = fn_get_products(array('for_bundle_product' => $product['product_id']));
+		list($pfz_related) = fn_get_products(array('for_pfz_related_product' => $product['product_id']));
 		//var_dump($pfz_related);
 		    if (count($pfz_related)) {
             $product['have_pfz_related'] = 'Y';
